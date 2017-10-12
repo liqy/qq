@@ -28,6 +28,8 @@ public class SSOHelper {
 
                 try {
 
+                    //TODO 实现intent
+
                     sso.getActivityName();
                     sso.getPackageName();
 
@@ -47,6 +49,7 @@ public class SSOHelper {
     private boolean bindRemoteSSOService(Activity activity, String packageName) {
         Context context = activity.getApplicationContext();
         Intent intent = new Intent("com.bwie.qq.remoteservice");
+        intent.setPackage("com.bwie.qq");
         return context.bindService(intent, conn, Service.BIND_AUTO_CREATE);
     }
 

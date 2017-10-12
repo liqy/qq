@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //TODO 待处理参数
+        //TODO 待处理参数,判断参数合法性
+
     }
 
     @Override

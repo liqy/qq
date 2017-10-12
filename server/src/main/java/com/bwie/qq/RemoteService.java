@@ -7,13 +7,13 @@ import android.os.RemoteException;
 
 public class RemoteService extends Service {
 
-    public final String action="com.bwie.qq.remoteservice";
+    public final String action = "com.bwie.qq.remoteservice";
 
     public RemoteService() {
     }
 
 
-    RemoteSSO.Stub binder=new RemoteSSO.Stub(){
+    RemoteSSO.Stub binder = new RemoteSSO.Stub() {
         /**
          * 返回应用程序包名
          * @return
@@ -22,7 +22,7 @@ public class RemoteService extends Service {
         @Override
         public String getPackageName() throws RemoteException {
             //TODO
-            return null;
+            return "com.bwie.qq";
         }
 
         /**
@@ -33,7 +33,7 @@ public class RemoteService extends Service {
         @Override
         public String getActivityName() throws RemoteException {
             //TODO
-            return null;
+            return "com.bwie.qq.MainActivity";
         }
     };
 
